@@ -57,7 +57,7 @@
       check_mode: yes
       register: name_state
 
-    - name: Debug
+    - name: Error message
       debug:
         msg: "Something wrong. Maybe nginx is not started, or 80 port is not listening, or your name is absent in the index.html page"
       when: service_state.state != "started" or port_check.failed != false or name_state.changed != false

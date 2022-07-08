@@ -32,7 +32,7 @@
         enabled: no
       when: ansible_os_family == "Debian"
 
-    - name: (ubuntu) start and enable ntp service
+    - name: (centos) start and enable ntp service
       become: yes
       service:
         name: ntpd
